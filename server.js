@@ -36,6 +36,11 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('Hello from Vercel!');
+});
+
+
 app.listen(PORT, () => {
   console.log(`Proxy server running at http://localhost:${PORT}`);
 });
