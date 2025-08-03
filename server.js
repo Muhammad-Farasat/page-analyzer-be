@@ -19,7 +19,7 @@ app.post("/api/chat", async (req, res) => {
       "https://api.groq.com/openai/v1/chat/completions",
       {
         model: "llama3-8b-8192",
-        messages,
+        messages: [{ role: "user", content: text }],
       },
       {
         headers: {
