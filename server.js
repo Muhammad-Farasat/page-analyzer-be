@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/api/chat", async (req, res) => {
-  const { messages } = req.body;
+  const { text } = req.body;
 
   try {
     const response = await axios.post(
