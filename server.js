@@ -13,7 +13,8 @@ app.use(express.json());
 
 app.post("/api/chat", async (req, res) => {
   const { messages } = req.body;
-  const text = messages?.[0]?.text;
+  const text = messages?.[0]?.content;
+  console.log(messages)
 
   try {
     const response = await axios.post(
